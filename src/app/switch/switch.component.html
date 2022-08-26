@@ -1,0 +1,16 @@
+<p>nf-switch works!</p>
+<div>
+<select (change)="selectitem($event)">
+<option *ngFor="let item of productlist" value="{{item}}"> {{item}} </option>
+</select>
+</div>
+<div [ngSwitch]="selecteditem" [ngClass]="cssclass">
+    <h2 *ngSwitchDefault>please select</h2>
+    <h2 *ngSwitchCase="'tv'">tv</h2>
+    <h2 *ngSwitchCase="'mobile'">mobile</h2>
+    <h2 *ngSwitchCase="'laptop'">laptop</h2>
+    <h2 *ngSwitchCase="'washingmachine'">washingmachine</h2>
+
+
+
+</div>

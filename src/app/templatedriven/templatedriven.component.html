@@ -1,0 +1,33 @@
+<form #myform ="ngForm" (ngSubmit)="onsubmit(myform)">
+   firstname:
+   <input type="text" name="fname"ngModel>
+   <br>
+   <br>
+   
+   lastname:
+   <input type="text" name="lname" ngModel>
+   <br>
+   <br>
+   emailid:
+   <input type="text" name="email" ngModel>
+   <br>
+   <br>
+   mobileno:
+   <input type="text"name="mnum" ngModel>
+   <br>
+   <br>
+   gender
+   <select name="gender" ngModel="gender">
+    <option *ngFor="let item of gender" value="{{item}}">{{item}}</option>
+    
+   </select>
+   <br>
+   <br>
+   <button type="Submit">add</button>
+   
+<br><br>
+<h2>Display Form Value</h2>
+{{myform.value|json}}
+
+
+</form>

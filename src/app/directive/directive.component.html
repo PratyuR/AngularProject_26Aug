@@ -1,0 +1,62 @@
+<div *ngIf="isactive;else elseblock">when condition is true</div>
+<ng-template #elseblock>when condition is false</ng-template>
+<h1> for loop</h1>
+<div *ngFor="let color of mycolor ; index   as i">{{i}}  {{color}}</div>
+
+
+<br> <br>
+
+name:
+<input type="text" #myname><br> <br>
+email:
+<input type="text" #email><br> <br>
+age:
+<input type="text"  #age> <br> <br>
+gender:
+<select >
+    <option  *ngFor="let item of lstgender">{{item}}</option>
+</select>
+
+
+<button (click) ="submit(myname.value,email.value,age.value)">submit</button>
+<br><br>
+<div *ngIf="issub">
+my name is {{myfullname}}<br>
+my email is{{myemailid}}<br>
+my age is{{age1}}
+</div>
+employeelist
+
+<table border="3" style="color:blueviolet">
+<tr>
+    <td>#</td>
+ <td>id</td>
+ <td>firstname</td> 
+ <td>lastname</td>   
+ <td>gender</td> 
+ <td>branch</td>
+ <td>dob</td>
+ <td>salary</td> 
+
+</tr>
+<tr *ngFor="let emp of students;index as i">
+    <td>{{i+1}}</td>
+    <td>{{emp.id}}</td>
+    <td>{{emp.firstname  |uppercase     |custom:emp.gender}}</td>
+    <td>{{emp.lastname |lowercase}}</td>
+    <td>{{emp.gender |uppercase}}</td>
+    <td>{{emp.branch}}</td>
+    <td>{{emp.dob |date:'YYYY-MM-dd'}}</td>
+    <td>{{emp.salary |currency:'USD'}}</td>
+    
+    
+
+    </tr>
+    </table>
+
+
+
+
+    
+
+
