@@ -17,7 +17,8 @@ import { ReactiveComponent } from './reactive/reactive.component';
 
 
 import {HttpClientModule} from '@angular/common/http';
-import { ListComponent } from './list/list.component'
+import { ListComponent } from './list/list.component';
+import { TestloclComponent } from './testlocl/testlocl.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ListComponent } from './list/list.component'
     PagenotfoundComponent,
     TemplatedrivenComponent,
     ReactiveComponent,
-    ListComponent
+    ListComponent,
+    TestloclComponent
   ],
   imports: [
     BrowserModule,
