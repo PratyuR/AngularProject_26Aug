@@ -15,6 +15,10 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { ReactiveComponent } from './reactive/reactive.component';
 
+
+import {HttpClientModule} from '@angular/common/http';
+import { ListComponent } from './list/list.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,15 +32,17 @@ import { ReactiveComponent } from './reactive/reactive.component';
     NavbarComponent,
     PagenotfoundComponent,
     TemplatedrivenComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import{FormGroup,FormControl,Validators}from '@angular/forms'
+import{FormGroup,FormControl,Validators}from '@angular/forms';
+import{GeneralApiService}from '../services/general-api.service';
 @Component({
   selector: 'app-reactive',
   templateUrl: './reactive.component.html',
@@ -8,11 +9,16 @@ import{FormGroup,FormControl,Validators}from '@angular/forms'
 export class ReactiveComponent implements OnInit {
   reactiveForm!:FormGroup;
   formdata={firstname:"",lastname:"",emailid:"",mobilenum:0,gender:"" }
-  gender=['male','female','other']
+ // gender=['male','female','other']
 
-  constructor() { }
+  constructor(private serviceApi:GeneralApiService) { }
+  gender=[];
+
 
   ngOnInit(): void {
+    debugger;
+   this.gender=this.serviceApi.getGender();
+
     this.reactiveForm=new FormGroup({
       'fname':new FormControl('',[Validators.required,Validators.maxLength(10),Validators.minLength(5)]),
       'lname':new FormControl(''),

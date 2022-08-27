@@ -8,6 +8,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { SwitchComponent } from './switch/switch.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { ReactiveComponent } from './reactive/reactive.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent },
@@ -15,8 +17,7 @@ const routes: Routes = [
   {path:"switch",component:SwitchComponent },
   {path:"templatedriven",component:TemplatedrivenComponent },
   {path:"reactive",component:ReactiveComponent },
-
-
+  {path:"userList",component:ListComponent },
   {path:"**",component:PagenotfoundComponent}
 
 

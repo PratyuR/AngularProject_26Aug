@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{GeneralApiService}from '../services/general-api.service';
 
 @Component({
   selector: 'app-templatedriven',
@@ -6,15 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./templatedriven.component.css']
 })
 export class TemplatedrivenComponent implements OnInit {
-  gender=['male','female','other']
+//  gender=['male','female','other']
 
-  constructor() { }
+  constructor(private api:GeneralApiService) { }
+  gender=[];
 
   ngOnInit(): void {
+
+    this.gender=this.api.getGender();
   }
   onsubmit(myform:any)
 {
-  debugger;
+debugger;
   console.log(myform.value)
 }
 }
